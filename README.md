@@ -1,0 +1,2 @@
+# sgpoolbot
+demobot
