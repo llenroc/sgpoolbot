@@ -235,7 +235,7 @@ bot.dialog('/scanICDialog', [
     function (session)
     {
         // builder.Prompts.attachment(session, "First, upload a picture of your IC so we can retrieve your name and IC number.");
-        builder.Prompts.text(session, "Upload a picture of your IC so we can retrieve your name IC number and other details.");
+        
         //https://sgpoolstorage.blob.core.windows.net/sgpoolimg/SingaporeIC_CitizenPic1.jpg
         //https://sgpoolstorage.blob.core.windows.net/sgpoolimg/SingaporeIC_CitizenPic2.jpg
         //https://sgpoolstorage.blob.core.windows.net/sgpoolimg/SingaporeIC_CitizenPic3.jpg
@@ -244,6 +244,11 @@ bot.dialog('/scanICDialog', [
         //https://sgpoolstorage.blob.core.windows.net/sgpoolimg/SingaporeICpic2.jpg
         //https://sgpoolstorage.blob.core.windows.net/sgpoolimg/NRIC_Han.jpg
         //https://sgpoolstorage.blob.core.windows.net/sgpoolimg/Photo_Han.jpg
+        if (session.message.source==='webchat' || session.message.source=== 'directline'){
+            builder.Prompts.attachment(session, "Upload a picture of your IC so we can retrieve your name IC number and other details.");
+        } else {
+            builder.Prompts.text(session, "Upload a picture of your IC so we can retrieve your name IC number and other details.");
+        }
     },
     function (session, results)
     {
