@@ -1,0 +1,23 @@
+{
+  "name": "sgpoolsuser",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "applicationinsights": "^0.22.0",
+    "async": "^2.5.0",
+    "botbuilder": "^3.9.1",
+    "mongodb": "^2.2.31",
+    "request": "^2.81.0",
+    "request-promise": "^4.2.1",
+    "restify": "^5.2.0",
+    "url": "^0.11.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
